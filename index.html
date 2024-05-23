@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" size="any" href="assets/img/favicon.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <title>Home</title>
+</head>
+
+<body>
+    <header id="menu" class="menu_container flex"> 
+        
+            <a href="#"><img class="logo_principal" src="https://ik.imagekit.io/4kqnwi1lux/Generation/ariah%20garcia.png?updatedAt=1716250004128" alt=""></a>
+
+            <nav>
+                <ul class="menu_lista flex"> 
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato">Contate Me</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="home_container">
+            <article id="home-texto" class="home_content"> 
+                <h4>Página de Mariah</h4>
+                <h1 id="typing-text"></h1>
+                <p>Convido você a explorar meus trabalhos e conhecer mais sobre minha jornada. Não deixe de visitar minhas redes sociais para acompanhar minhas atualizações e projetos futuros.</p>
+
+                <a class="btn" target="_blank" href="https://github.com/Mariahcpgo">
+                   
+                    Explore
+                </a>
+            </article>
+
+            <article id="home-imagem" class="home_content"> 
+                <img class="home_content_img" src="assets/img/elementos.svg" alt="Capacete de Astronauta Animado">
+               
+            </article>
+        </section>
+
+        <section id="sobre" class="sobre_container"> 
+
+            <div class="sobre-foto">
+            <img src="https://avatars.githubusercontent.com/u/162521119?s=400&u=1f4cb39ac3b77268a2e7dcd178d048432ee8fd7f&v=4"
+                alt="Foto do Perfil da Mariah">
+            </div>
+
+            <article id="sobre-texto" class="sobre-sou">
+                <h1>Quem sou eu?</h1>
+                <p> Sou um profissional com mais de 5 anos de experiência na área administrativa e financeira, onde me destaquei na liderança de processos e pessoas com comprometimento e eficácia. 
+                    Recentemente, iniciei uma emocionante transição de carreira para a área de programação, trazendo minha sólida experiência em gerenciamento, planejamento e comunicação para o mundo da tecnologia.</p>
+                    <p>Após participar de uma imersão intensiva na escola 42 São Paulo de Desenvolvimento Web, adquiri sólidos conhecimentos em HTML, CSS e JavaScript. 
+                        Motivada a aprofundar ainda mais minhas habilidades, ingressei no programa de capacitação da Generation Brasil, onde me especializei como Desenvolvedor Full Stack em JavaScript, ampliando meu conhecimento em TypeScript, MySQL, NestJS e React.</p>
+                    
+                <div id="sobre-github" class="sobre_github flex">
+                    <a class="btn" target="_blank" href="https://github.com/Mariahcpgo">Github</a>
+                  
+                    <p>Seguidores</p>
+                    <p>Repositórios</p>
+                </div>
+
+            </article>
+        </section>
+
+        <section id="contato" class="contato_container"> 
+            <article id="contato-texto" class="contato_content"> 
+                <h4>Me Contate</h4>
+                <p>Se você está em busca de uma profissional dedicada e versátil, pronta para enfrentar desafios e buscar sempre as melhores práticas, entre em contato comigo aqui para discutirmos como posso contribuir no seu novo projeto.</p><br>
+                <p>Vamos juntos transformar suas ideias em realidade!</p>
+
+                <div id="redes-sociais" class="social_container flex"> 
+                    <a href="https://www.linkedin.com/in/a-mariah-garcia/">
+                        <img class="social_icon" src="assets/img/linkedin.svg" alt="Logo do LinkedIn" />
+                    </a>
+                    <a href="https://github.com/Mariahcpgo">
+                        <img class="social_icon" src="assets/img/github.svg" alt="Logo do Github" />
+                    </a>
+                    <a href="">
+                        <img class="social_icon" src="assets/img/instagram.svg" alt="Logo do Instagram" />
+                    </a>
+                </div>
+            </article>
+
+            <form action="" method="POST">
+                <label for="nome">Nome: </label>
+                <input id="nome" type="text" name="name" placeholder="Digite seu nome" required>
+
+                <label for="email">Email: </label>
+                <input id="email" type="email" name="email" placeholder="Digite seu email" required>
+
+                <label for="subject">Assunto: </label>
+                <input id="subject" type="text" name="subject" placeholder="Digite o título da mensagem" required>
+
+                <label for="message">Mensagem: </label>
+                <textarea id="message" name="message" placeholder="Digite sua mensagem" required></textarea>
+
+                <button class="btn" type="submit">Enviar</button> 
+            </form>
+        </section>
+    </main>
+
+    <footer class="flex">
+        Desenvolvido por Mariah Garcia - 2024 &copy;
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const text = "Bem-vindo(a) ao meu portfólio";
+            const typingTextElement = document.getElementById("typing-text");
+            
+            let index = 0;
+            function type() {
+                if (index < text.length) {
+                    typingTextElement.innerHTML += text.charAt(index);
+                    index++;
+                    setTimeout(type, 100); 
+                } else {
+                    typingTextElement.style.borderRight = "none"; 
+                }
+            }
+            
+            type();
+        });
+    </script>
+</body>
+
+</html>
